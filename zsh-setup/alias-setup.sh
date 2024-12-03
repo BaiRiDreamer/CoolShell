@@ -25,7 +25,7 @@ cat >> "$ZSHRC_FILE" <<EOL
 
 # Aliases for common commands
 alias ll='ls -lah'            # List files with detailed information
-alias update='sudo apt update && sudo apt upgrade -y'  # Update system
+alias update=' apt update &&  apt upgrade -y'  # Update system
 alias cls='clear'             # Clear terminal screen
 alias ..='cd ..'              # Go up one directory
 

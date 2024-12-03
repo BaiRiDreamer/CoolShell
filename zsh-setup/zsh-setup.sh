@@ -19,13 +19,13 @@ install_zsh() {
     else
         echo "Zsh is not installed. Installing Zsh..."
         if command_exists apt; then
-            sudo apt update && sudo apt install -y zsh || error_exit "Failed to install Zsh using apt."
+              apt update &&   apt install -y zsh || error_exit "Failed to install Zsh using apt."
         elif command_exists yum; then
-            sudo yum install -y zsh || error_exit "Failed to install Zsh using yum."
+              yum install -y zsh || error_exit "Failed to install Zsh using yum."
         elif command_exists dnf; then
-            sudo dnf install -y zsh || error_exit "Failed to install Zsh using dnf."
+              dnf install -y zsh || error_exit "Failed to install Zsh using dnf."
         elif command_exists pacman; then
-            sudo pacman -Sy --noconfirm zsh || error_exit "Failed to install Zsh using pacman."
+              pacman -Sy --noconfirm zsh || error_exit "Failed to install Zsh using pacman."
         else
             error_exit "Package manager not supported. Please install Zsh manually."
         fi
@@ -116,13 +116,13 @@ install_plugins() {
     if ! command_exists autojump; then
         echo "Installing autojump..."
         if command_exists apt; then
-            sudo apt install -y autojump || error_exit "Failed to install autojump using apt."
+              apt install -y autojump || error_exit "Failed to install autojump using apt."
         elif command_exists yum; then
-            sudo yum install -y autojump || error_exit "Failed to install autojump using yum."
+              yum install -y autojump || error_exit "Failed to install autojump using yum."
         elif command_exists dnf; then
-            sudo dnf install -y autojump || error_exit "Failed to install autojump using dnf."
+              dnf install -y autojump || error_exit "Failed to install autojump using dnf."
         elif command_exists pacman; then
-            sudo pacman -Sy --noconfirm autojump || error_exit "Failed to install autojump using pacman."
+              pacman -Sy --noconfirm autojump || error_exit "Failed to install autojump using pacman."
         else
             error_exit "Package manager not supported. Please install autojump manually."
         fi
