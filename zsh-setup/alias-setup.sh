@@ -32,6 +32,9 @@ alias ..='cd ..'              # Go up one directory
 # More useful aliases
 alias h='history'             # Show command history
 alias z='zsh'                 # Open Zsh shell directly
+alias hd='head -n 1'         # Show first line of a file
+alias tl='tail -n 1'      # Show last 10 lines of a file
+alias cls='clear'             # Clear terminal screen
 EOL
 
 # Set batcat alias if bat is installed
